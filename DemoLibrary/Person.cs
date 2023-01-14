@@ -7,14 +7,6 @@ using System.Threading.Tasks;
 
 namespace DemoLibrary
 {
-
-    public class DataAccess
-    {
-        protected internal string GetConnectionString()
-        {
-            return "Sensitive Data";
-        }
-    }
     public class Person
     {
         private protected string formerLastName = "";
@@ -43,22 +35,5 @@ namespace DemoLibrary
             DataAccess data=new DataAccess();
             string conn= data.GetConnectionString();
         }
-    }
-
-    public class Employee : Person
-    {
-        public string GetFormerLastName()
-        {
-            return formerLastName;
-        }
-    }
-
-    public class Manager:Employee
-    {
-        public string GetAllNames()
-        {
-            return $"{FirstName} {LastName} {formerLastName}";
-        }
-
     }
 }
